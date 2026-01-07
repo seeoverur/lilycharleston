@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Shopping in the Lowcountry | Your Ultimate Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-pink: #ff69b4;
+            --soft-pink: #ffb6d9;
+            --light-pink: #ffe4f0;
+            --dark-pink: #d94f8f;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--light-pink) 0%, #fff 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: var(--primary-pink) !important;
+            box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--light-pink) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--dark-pink) 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero-section p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+        }
+        
+        .shop-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .shop-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
+        }
+        
+        .shop-card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .shop-card .card-body {
+            padding: 20px;
+        }
+        
+        .shop-card h3 {
+            color: var(--dark-pink);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .shop-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        
+        .btn-shop {
+            background: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-shop:hover {
+            background: var(--dark-pink);
+            color: white;
+            transform: scale(1.05);
+        }
+        
+        .location-badge {
+            background: var(--soft-pink);
+            color: var(--dark-pink);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        
+        .section-title {
+            color: var(--dark-pink);
+            font-weight: 700;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 2.2rem;
+        }
+        
+        .resources-section {
+            background: white;
+            padding: 50px 0;
+            margin-top: 50px;
+            border-top: 3px solid var(--soft-pink);
+        }
+        
+        .resources-section h2 {
+            color: var(--dark-pink);
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        
+        .resource-link {
+            color: var(--primary-pink);
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 10px 0;
+        }
+        
+        .resource-link:hover {
+            color: var(--dark-pink);
+            padding-left: 10px;
+        }
+        
+        .location-footer {
+            background: var(--light-pink);
+            padding: 30px 0;
+            margin-top: 50px;
+            text-align: center;
+            color: var(--dark-pink);
+        }
+        
+        footer {
+            background: var(--dark-pink);
+            color: white;
+            padding: 30px 0;
+            margin-top: 0;
+        }
+        
+        .icon-wrapper {
+            font-size: 1.5rem;
+            margin-right: 8px;
+            color: var(--primary-pink);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="bi bi-bag-heart-fill"></i> Lowcountry Shopping</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#shops">Shops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1><i class="bi bi-shop"></i> Best Shopping in the Lowcountry</h1>
+            <p class="lead">Discover amazing boutiques, stores, and shopping destinations perfect for your girls trip or girls weekend getaway</p>
+        </div>
+    </div>
+
+    <!-- Shopping Cards Section -->
+    <div class="container" id="shops">
+        <div class="row">
+            <!-- Card 1: King Street -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800" alt="King Street Shopping">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Downtown Charleston</span>
+                        <h3>King Street</h3>
+                        <p>The premier shopping destination featuring national retailers, local boutiques, and everything in between along historic King Street.</p>
+                        <a href="https://www.charlestoncvb.com/things-to-do/shopping/king-street/" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Charleston City Market -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=800" alt="Charleston City Market">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Downtown Charleston</span>
+                        <h3>Charleston City Market</h3>
+                        <p>Historic open-air market with local artisans, handmade sweetgrass baskets, jewelry, and authentic Charleston souvenirs.</p>
+                        <a href="https://www.thecharlestoncitymarket.com/" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Tanger Outlets -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?w=800" alt="Outlet Shopping">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> North Charleston</span>
+                        <h3>Tanger Outlets</h3>
+                        <p>Premium outlet shopping with major brands like Coach, Michael Kors, Nike, and more at unbeatable prices.</p>
+                        <a href="https://www.tangeroutlet.com/charleston" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Mount Pleasant Towne Centre -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1519500099198-e818ac1b5c1c?w=800" alt="Shopping Mall">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Mount Pleasant</span>
+                        <h3>Mount Pleasant Towne Centre</h3>
+                        <p>Open-air lifestyle center featuring major retailers, specialty shops, dining, and entertainment options.</p>
+                        <a href="https://www.mtpleasanttownecentre.com/" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Freshfields Village -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?w=800" alt="Village Shopping">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Kiawah Island</span>
+                        <h3>Freshfields Village</h3>
+                        <p>Charming village atmosphere with upscale boutiques, home decor shops, and coastal-inspired fashion.</p>
+                        <a href="https://www.freshfieldsvillage.com/" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Second Sunday on King -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?w=800" alt="Artisan Market">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Downtown Charleston</span>
+                        <h3>Second Sunday on King</h3>
+                        <p>Monthly artisan market featuring local makers, vintage finds, handcrafted goods, and live entertainment.</p>
+                        <a href="https://www.secondsundayonking.com/" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Center Folly Beach -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1515041219749-89347f83291a?w=800" alt="Beach Shopping">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Folly Beach</span>
+                        <h3>Center Street Shops</h3>
+                        <p>Beachy boutiques and surf shops offering swimwear, beach gear, local art, and coastal-themed souvenirs.</p>
+                        <a href="https://www.visitfollybeach.com/things-to-do/shopping/" class="btn btn-shop" target="_blank">Visit Website <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Bella's Boutique -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?w=800" alt="Fashion Boutique">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> Mount Pleasant</span>
+                        <h3>Local Boutiques</h3>
+                        <p>Trendy fashion boutiques offering curated collections of clothing, accessories, and unique statement pieces.</p>
+                        <a href="https://www.charlestoncvb.com/things-to-do/shopping/boutiques/" class="btn btn-shop" target="_blank">Explore Boutiques <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 9: Antique Shops -->
+            <div class="col-md-4">
+                <div class="shop-card card">
+                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800" alt="Antique Shopping">
+                    <div class="card-body">
+                        <span class="location-badge"><i class="bi bi-geo-alt-fill"></i> West Ashley</span>
+                        <h3>Antique District</h3>
+                        <p>Treasure troves of vintage furniture, collectibles, and one-of-a-kind finds along Savannah Highway.</p>
+                        <a href="https://www.explorecharleston.com/charleston-antique-shopping/" class="btn btn-shop" target="_blank">Discover Antiques <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <div class="resources-section" id="resources">
+        <div class="container">
+            <h2 class="text-center mb-4">More Lowcountry Resources</h2>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <i class="icon-wrapper bi bi-calendar-event"></i>
+                    <a href="https://partycharleston.com" class="resource-link">Party Charleston</a>
+                    <p class="text-muted">Entertainment and event planning for your celebration</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="icon-wrapper bi bi-cup-straw"></i>
+                    <a href="https://www.charlestoncvb.com/restaurants/" class="resource-link">Charleston Dining Guide</a>
+                    <p class="text-muted">Best restaurants and culinary experiences</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="icon-wrapper bi bi-building"></i>
+                    <a href="https://www.charlestonhotelguide.com/" class="resource-link">Charleston Hotels</a>
+                    <p class="text-muted">Accommodations for your Lowcountry stay</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Location Footer -->
+    <div class="location-footer">
+        <div class="container">
+            <p class="mb-0"><strong>Serving the Lowcountry:</strong> Mount Pleasant, Folly Beach, Isle of Palms, North Charleston, Summerville, West Ashley and nearby areas</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Lowcountry Shopping Guide. Discover the best retail experiences in Charleston and beyond.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

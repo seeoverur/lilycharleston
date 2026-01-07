@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Lowcountry Shopping Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-pink: #ff69b4;
+            --soft-pink: #ffb6d9;
+            --light-pink: #ffe4f0;
+            --dark-pink: #d94f8f;
+        }
+        
+        body {
+            background: linear-gradient(135deg, var(--light-pink) 0%, #fff 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background: var(--primary-pink) !important;
+            box-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+        }
+        
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--light-pink) !important;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--dark-pink) 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        }
+        
+        .header-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+        }
+        
+        .content-section h2 {
+            color: var(--dark-pink);
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .content-section p {
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+        
+        .mission-box {
+            background: linear-gradient(135deg, var(--light-pink) 0%, var(--soft-pink) 100%);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+        }
+        
+        .mission-box h2 {
+            color: var(--dark-pink);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .mission-box p {
+            color: var(--dark-pink);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border: 2px solid var(--soft-pink);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+        }
+        
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary-pink);
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            color: var(--dark-pink);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .team-section {
+            background: var(--light-pink);
+            padding: 50px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .team-section h2 {
+            color: var(--dark-pink);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .stats-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.1);
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary-pink);
+            display: block;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-pink) 0%, var(--dark-pink) 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .btn-cta {
+            background: white;
+            color: var(--primary-pink);
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .btn-cta:hover {
+            background: var(--light-pink);
+            color: var(--dark-pink);
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: var(--dark-pink);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .back-link {
+            color: var(--primary-pink);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            color: var(--dark-pink);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="lowcountry-shopping.html"><i class="bi bi-bag-heart-fill"></i> Lowcountry Shopping</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="lowcountry-shopping.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy-policy.html">Privacy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <div class="header-section">
+        <div class="container text-center">
+            <h1><i class="bi bi-heart-fill"></i> About Our Shopping Guide</h1>
+            <p class="lead">Connecting you with the best shopping experiences in the Lowcountry</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="content-section">
+            <h2>Welcome to the Lowcountry Shopping Guide</h2>
+            <p>We're passionate about helping locals and visitors discover the incredible shopping destinations throughout Charleston and the surrounding Lowcountry region. Whether you're planning a girls weekend getaway, searching for the perfect boutique, or looking to explore local markets and outlets, we've curated the best shopping experiences the area has to offer.</p>
+            
+            <p>The Charleston area is home to a vibrant retail scene that blends historic charm with modern style. From the cobblestone streets of downtown Charleston to the beach shops of Folly Beach and Isle of Palms, our region offers something for every shopper. We've made it our mission to showcase these amazing destinations and help you make the most of your shopping adventures.</p>
+
+            <!-- Mission Box -->
+            <div class="mission-box">
+                <h2><i class="bi bi-compass"></i> Our Mission</h2>
+                <p>To be your trusted companion in discovering the Lowcountry's finest shopping destinations, saving you time while helping you find exactly what you're looking for.</p>
+            </div>
+
+            <h2>Why Choose Our Guide?</h2>
+            <p>The Lowcountry offers countless shopping opportunities, but finding the right places can be overwhelming. That's where we come in. We've done the research, explored the locations, and compiled comprehensive information about the best shopping spots in Mount Pleasant, North Charleston, Summerville, West Ashley, Folly Beach, Isle of Palms, and beyond.</p>
+
+            <!-- Features Grid -->
+            <div class="row mt-5 mb-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <h3>Local Expertise</h3>
+                        <p>We know the Lowcountry inside and out, from hidden boutique gems to major shopping centers.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-star-fill"></i>
+                        <h3>Curated Selection</h3>
+                        <p>Every shopping destination we feature has been carefully selected for quality and experience.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-clock-fill"></i>
+                        <h3>Save Time</h3>
+                        <p>Skip the endless searching and let us guide you directly to the best shopping spots.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-map-fill"></i>
+                        <h3>Complete Coverage</h3>
+                        <p>From downtown Charleston to the barrier islands, we cover all major Lowcountry shopping areas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-people-fill"></i>
+                        <h3>Perfect for Groups</h3>
+                        <p>Ideal for girls trips, bachelorette parties, birthday celebrations, and group outings.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="bi bi-shield-check"></i>
+                        <h3>Trusted Information</h3>
+                        <p>Up-to-date details and direct links to official shopping destination websites.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2>What We Offer</h2>
+            <p>Our shopping guide provides comprehensive information about retail destinations across the Lowcountry region. We feature everything from upscale boutiques on King Street to outlet shopping in North Charleston, from historic markets to beachside surf shops. Each listing includes location details, descriptions, and direct links to help you plan your shopping experience.</p>
+
+            <p>We understand that different shoppers have different needs. Whether you're looking for designer fashion, local artisan crafts, antique treasures, or beach gear, our guide helps you find exactly what you need. We also highlight areas perfect for special occasions, including girls weekends, bachelorette parties, and celebration getaways.</p>
+
+            <!-- Team Section -->
+            <div class="team-section">
+                <h2><i class="bi bi-people"></i> Who We Are</h2>
+                <p style="text-align: center; color: #555;">We're a team of Charleston locals who live and breathe the Lowcountry lifestyle. Our passion for shopping, supporting local businesses, and exploring new retail experiences drives everything we do. We're constantly updating our guide with new discoveries and keeping our information current so you always have the best recommendations at your fingertips.</p>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Shopping Destinations</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">Lowcountry Regions Covered</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Local Knowledge</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>The Lowcountry Shopping Experience</h2>
+            <p>Shopping in the Lowcountry is about more than just making purchases—it's an experience. You can spend the morning browsing boutiques on King Street, enjoy lunch at a waterfront restaurant, and finish the day exploring artisan markets. The region's unique blend of Southern charm, coastal lifestyle, and cultural heritage creates a shopping atmosphere you won't find anywhere else.</p>
+
+            <p>From Mount Pleasant's Towne Centre to Folly Beach's laid-back surf shops, from Summerville's antique district to Isle of Palms' beach boutiques, each area offers its own distinct character and shopping personality. We're here to help you navigate these diverse options and create memorable shopping experiences.</p>
+
+            <h2>Our Commitment</h2>
+            <p>We're committed to maintaining the most accurate, helpful, and comprehensive shopping guide for the Charleston Lowcountry area. We respect your privacy, never share your information, and always strive to provide value with every visit to our site. Our goal is simple: help you discover amazing shopping destinations and make your time in the Lowcountry unforgettable.</p>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Ready to Start Shopping?</h2>
+                <p style="color: white; font-size: 1.2rem;">Explore our curated collection of the Lowcountry's best shopping destinations</p>
+                <a href="lowcountry-shopping.html" class="btn-cta">Discover Shopping Spots <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <h2>Connect With Us</h2>
+            <p>We love hearing from fellow shopping enthusiasts! If you have questions, suggestions for new locations to feature, or just want to share your favorite Lowcountry shopping experiences, we'd love to hear from you. Your feedback helps us improve and expand our guide to better serve the community.</p>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="lowcountry-shopping.html" class="back-link"><i class="bi bi-arrow-left"></i> Back to Shopping Guide</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2025 Lowcountry Shopping Guide. All rights reserved.</p>
+            <p class="mb-0">
+                <a href="about.html" style="color: white; text-decoration: none;">About</a> | 
+                <a href="privacy-policy.html" style="color: white; text-decoration: none;">Privacy Policy</a> | 
+                <a href="lowcountry-shopping.html" style="color: white; text-decoration: none;">Home</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
